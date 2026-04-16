@@ -1,0 +1,105 @@
+name: Watch Midnight releases
+on:
+  schedule:
+    - cron: '0 1 * * *'
+  workflow_dispatch:
+    inputs:
+      seed:
+        description: 'Seed mode (fill seen.txt without creating issues)'
+        type: boolean
+        default: false
+
+permissions:
+  issues: write
+  contents: write
+
+jobs:
+  check:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Check new versions
+        env:
+          GH_TOKEN: ${{ secrets.GHCR_PAT }}
+          GH_ISSUE_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          REPO: ${{ github.repository }}
+          SEED: ${{ inputs.seed }}
+        run: |
+          set -e
+          REGEX="^[0-9]+\.[0-9]+\.[0-9]+(-(rc|beta)\.[0-9]+)?$"
+
+          DOCKER_PACKAGES=("proof-server" "midnight-node" "indexer-standalone")
+
+          NPM_PACKAGES=(
+            "wallet-sdk-facade"
+            "compact-runtime"
+            "ledger-v8"
+            "onchain-runtime-v3"
+            "ledger-v9"
+            "onchain-runtime-v4"
+            "compact-js"
+            "platform-js"
+          )
+
+          touch seen.txt
+
+          notify() {
+            local KEY="$1"
+            local URL="$2"
+            if [ "$SEED" = "true" ]; then
+              echo "SEED: $KEY"
+            else
+              echo "NEW: $KEY"
+              GH_TOKEN="$GH_ISSUE_TOKEN" gh issue create \
+                --title "New version: $KEY" \
+                --body "$URL" \
+                --repo "$REPO"
+            fi
+          }
+
+          # --- Docker images (GHCR container) ---
+          for PKG in "${DOCKER_PACKAGES[@]}"; do
+            echo "Checking docker: $PKG"
+            TAGS=$(curl -sf -H "Authorization: Bearer $GH_TOKEN" \
+              -H "Accept: application/vnd.github+json" \
+              "https://api.github.com/orgs/midnight-ntwrk/packages/container/$PKG/versions?per_page=100" \
+              | jq -r '.[].metadata.container.tags[]' 2>/dev/null | grep -E "$REGEX" || true)
+
+            for TAG in $TAGS; do
+              KEY="docker/$PKG:$TAG"
+              if ! grep -qxF "$KEY" seen.txt; then
+                echo "$KEY" >> seen.txt
+                notify "$KEY" "https://github.com/midnight-ntwrk/artifacts/pkgs/container/$PKG"
+              fi
+            done
+          done
+
+          # --- npm packages (GHCR npm registry) ---
+          for PKG in "${NPM_PACKAGES[@]}"; do
+            FULL="@midnight-ntwrk/$PKG"
+            echo "Checking npm: $FULL"
+
+            RESP=$(curl -sf -H "Authorization: Bearer $GH_TOKEN" \
+              "https://npm.pkg.github.com/@midnight-ntwrk/$PKG" || echo "")
+
+            if [ -z "$RESP" ]; then
+              echo "  (not published yet or unavailable)"
+              continue
+            fi
+
+            VERSIONS=$(echo "$RESP" | jq -r '.versions | keys[]' 2>/dev/null | grep -E "$REGEX" || true)
+
+            for VER in $VERSIONS; do
+              KEY="npm/$FULL@$VER"
+              if ! grep -qxF "$KEY" seen.txt; then
+                echo "$KEY" >> seen.txt
+                notify "$KEY" "https://github.com/midnight-ntwrk/artifacts/pkgs/npm/$PKG"
+              fi
+            done
+          done
+
+      - uses: stefanzweifel/git-auto-commit-action@v5
+        with:
+          commit_message: 'update seen.txt'
+          file_pattern: 'seen.txt'
