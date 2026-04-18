@@ -116,3 +116,4 @@ npm/@midnight-ntwrk/platform-js@2.2.1
 npm/@midnight-ntwrk/platform-js@2.2.2
 npm/@midnight-ntwrk/platform-js@2.2.4
 docker/midnight-node:1.0.0-rc.3
+docker/indexer-standalone:4.1.0-rc.1
