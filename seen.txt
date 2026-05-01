@@ -127,3 +127,4 @@ npm/@midnight-ntwrk/compact-runtime@0.16.0-rc.0
 docker/indexer-standalone:4.2.1
 docker/midnight-node:1.0.0-rc.5
 npm/@midnight-ntwrk/compact-runtime@0.16.0
+docker/indexer-standalone:4.3.0
