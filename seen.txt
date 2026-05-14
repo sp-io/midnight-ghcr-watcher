@@ -132,3 +132,4 @@ docker/indexer-standalone:4.3.1
 docker/proof-server:8.1.0
 docker/midnight-node:1.0.0-rc.7
 npm/@midnight-ntwrk/ledger-v8@8.1.0
+docker/midnight-node:1.0.0-rc.8
