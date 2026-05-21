@@ -137,3 +137,4 @@ docker/indexer-standalone:4.3.2-rc.1
 docker/indexer-standalone:4.3.2
 npm/@midnight-ntwrk/compact-js@2.5.1
 docker/midnight-node:1.0.0
+docker/indexer-standalone:4.3.2-rc.2
