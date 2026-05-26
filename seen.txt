@@ -139,3 +139,4 @@ npm/@midnight-ntwrk/compact-js@2.5.1
 docker/midnight-node:1.0.0
 docker/indexer-standalone:4.3.2-rc.2
 docker/indexer-standalone:4.3.2-rc.3
+npm/@midnight-ntwrk/wallet-sdk-facade@4.0.1
