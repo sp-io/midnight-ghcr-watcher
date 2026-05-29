@@ -141,3 +141,5 @@ docker/indexer-standalone:4.3.2-rc.2
 docker/indexer-standalone:4.3.2-rc.3
 npm/@midnight-ntwrk/wallet-sdk-facade@4.0.1
 docker/indexer-standalone:4.3.3-rc.2
+docker/midnight-node:1.0.1-rc.1
+docker/indexer-standalone:4.3.3-rc.3
