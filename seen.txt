@@ -145,3 +145,4 @@ docker/midnight-node:1.0.1-rc.1
 docker/indexer-standalone:4.3.3-rc.3
 docker/indexer-standalone:4.3.3-rc.4
 docker/indexer-standalone:4.3.3
+docker/proof-server:9.0.0-rc.1
