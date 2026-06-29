@@ -153,3 +153,4 @@ npm/@midnight-ntwrk/compact-js@2.5.5-rc.1
 docker/proof-server:9.0.0-rc.3
 npm/@midnight-ntwrk/platform-js@3.0.0
 npm/@midnight-ntwrk/compact-js@2.5.5-rc.2
+docker/midnight-node:2.0.0-rc.3
