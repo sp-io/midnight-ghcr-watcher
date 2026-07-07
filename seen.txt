@@ -159,3 +159,4 @@ npm/@midnight-ntwrk/compact-runtime@0.18.0-rc.0
 npm/@midnight-ntwrk/compact-js@2.5.5-rc.4
 npm/@midnight-ntwrk/compact-js@2.5.5-rc.5
 docker/proof-server:9.0.0-rc.4
+docker/proof-server:9.0.0-rc.5
