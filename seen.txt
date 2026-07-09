@@ -163,3 +163,5 @@ docker/proof-server:9.0.0-rc.5
 docker/midnight-node:1.0.1-rc.2
 npm/@midnight-ntwrk/compact-runtime@0.18.0-rc.1
 npm/@midnight-ntwrk/compact-js@2.5.5-rc.6
+npm/@midnight-ntwrk/ledger-v8@8.2.0-rc.1
+npm/@midnight-ntwrk/compact-js@2.5.5-rc.7
