@@ -170,3 +170,4 @@ docker/proof-server:8.2.0-rc.1
 docker/indexer-standalone:4.4.0-rc.1
 docker/indexer-standalone:4.3.4
 docker/indexer-standalone:4.3.5
+npm/@midnight-ntwrk/ledger-v8@8.1.1
