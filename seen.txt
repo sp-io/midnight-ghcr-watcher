@@ -175,3 +175,5 @@ docker/proof-server:8.1.1
 npm/@midnight-ntwrk/onchain-runtime-v3@3.1.0
 docker/indexer-standalone:4.4.0-rc.2
 docker/proof-server:9.0.0-rc.6
+npm/@midnight-ntwrk/ledger-v9@1.0.0-rc.3
+npm/@midnight-ntwrk/onchain-runtime-v4@4.0.0-rc.3
