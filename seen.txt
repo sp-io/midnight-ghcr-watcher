@@ -181,3 +181,4 @@ docker/proof-server:9.0.0-rc.7
 npm/@midnight-ntwrk/ledger-v9@1.0.0-rc.4
 docker/midnight-node:1.0.1
 docker/indexer-standalone:4.3.7
+npm/@midnight-ntwrk/compact-runtime@0.19.0-rc.0
