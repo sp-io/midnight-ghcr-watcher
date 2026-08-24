@@ -184,3 +184,4 @@ docker/indexer-standalone:4.3.7
 npm/@midnight-ntwrk/compact-runtime@0.19.0-rc.0
 npm/@midnight-ntwrk/compact-js@2.5.5-rc.8
 docker/midnight-node:2.1.0-beta.1
+docker/indexer-standalone:4.4.0-rc.3
