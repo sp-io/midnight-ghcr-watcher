@@ -188,3 +188,6 @@ docker/indexer-standalone:4.4.0-rc.3
 docker/proof-server:8.1.2
 npm/@midnight-ntwrk/compact-runtime@0.19.0
 docker/indexer-standalone:4.3.800-rc.1
+docker/indexer-standalone:4.4.0-rc.5
+npm/@midnight-ntwrk/ledger-v8@8.1.2
+npm/@midnight-ntwrk/onchain-runtime-v3@3.1.1
