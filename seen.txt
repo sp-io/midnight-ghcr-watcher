@@ -193,3 +193,4 @@ npm/@midnight-ntwrk/ledger-v8@8.1.2
 npm/@midnight-ntwrk/onchain-runtime-v3@3.1.1
 docker/midnight-node:1.0.2
 npm/@midnight-ntwrk/ledger-v9@1.0.0-rc.5
+docker/midnight-node:2.1.0-rc.1
