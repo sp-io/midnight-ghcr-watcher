@@ -195,3 +195,5 @@ docker/midnight-node:1.0.2
 npm/@midnight-ntwrk/ledger-v9@1.0.0-rc.5
 docker/midnight-node:2.1.0-rc.1
 docker/midnight-node:2.1.0-rc.2
+docker/midnight-node:1.0.300
+npm/@midnight-ntwrk/compact-js@3.0.0-rc.0
