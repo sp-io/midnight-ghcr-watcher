@@ -200,3 +200,4 @@ npm/@midnight-ntwrk/compact-js@3.0.0-rc.0
 docker/midnight-node:2.1.0-rc.3
 npm/@midnight-ntwrk/compact-js@3.0.0-rc.1
 npm/@midnight-ntwrk/compact-js@3.0.0-rc.2
+npm/@midnight-ntwrk/compact-runtime@0.20.0-rc.0
