@@ -203,3 +203,6 @@ npm/@midnight-ntwrk/compact-js@3.0.0-rc.2
 npm/@midnight-ntwrk/compact-runtime@0.20.0-rc.0
 docker/proof-server:9.0.0-rc.8
 npm/@midnight-ntwrk/compact-runtime@0.20.0
+docker/midnight-node:2.1.0-rc.4
+npm/@midnight-ntwrk/onchain-runtime-v4@4.0.0-rc.4
+npm/@midnight-ntwrk/compact-js@3.0.0-rc.3
