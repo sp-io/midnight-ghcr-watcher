@@ -221,3 +221,4 @@ npm/@midnight-ntwrk/ledger-v9@1.0.0-rc.7
 npm/@midnight-ntwrk/compact-runtime@0.21.0-rc.0
 npm/@midnight-ntwrk/compact-js@3.0.0-rc.4
 npm/@midnight-ntwrk/compact-js@3.0.0-rc.5
+npm/@midnight-ntwrk/compact-runtime@0.21.0
