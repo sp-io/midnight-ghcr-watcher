@@ -230,3 +230,4 @@ npm/@midnight-ntwrk/compact-js@3.0.0
 docker/proof-server:9.0.1
 npm/@midnight-ntwrk/ledger-v9@1.0.1
 npm/@midnight-ntwrk/onchain-runtime-v4@4.0.1
+docker/midnight-node:2.1.101
