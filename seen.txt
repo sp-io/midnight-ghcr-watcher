@@ -238,3 +238,4 @@ npm/@midnight-ntwrk/onchain-runtime-v4@4.0.2-rc.0
 docker/indexer-standalone:4.4.0
 docker/midnight-node:2.1.101-rc.2
 docker/midnight-node:2.1.200-rc.1
+docker/midnight-node:2.1.200-rc.2
